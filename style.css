@@ -1,0 +1,308 @@
+/* =========================================================
+   Lab Assignment 3 - Portfolio Website
+   Author: Janvi Sehrawat
+   File: style.css
+   ========================================================= */
+
+body {
+    background-color: rgb(242, 245, 255);
+    color: rgb(34, 34, 34);
+    line-height: 1.6;
+    font-family: "lato", sans-serif;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(-45deg, #f5f7ff, #ede9ff, #f0f4ff);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+header {
+    background-color: rgb(123, 63, 226);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px 10px;
+    border-bottom: 4px solid rgb(4, 4, 4);
+}
+
+#intro {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#welcome {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav {
+    background-color:rgb(123, 63, 226);
+    border: 4px solid black;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#list1 {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.list-items {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navs {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 10px;
+    position: relative;
+}
+
+.navs::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navs:hover::after {
+    width: 100%;
+}
+
+section {
+    background-color: rgb(255, 255, 255);
+    margin: 40px auto;
+    padding: 30px 80px;
+    max-width: 900px;
+    border-radius: 12px;
+    border: 2px solid rgb(207, 207, 255);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: rgb(75, 0, 204);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 30px;
+}
+
+#profile-image {
+    display: block;
+    margin: 15px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(0, 119, 255);
+    justify-self: center;
+}
+
+#p1 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.list2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(51, 51, 51);
+}
+.list2 li {
+    padding: 15px;
+    background-color: rgb(182, 182, 253);
+}
+
+.list2 li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid rgb(143, 122, 255);
+    padding: 10px;
+    font-size: 15px;
+}
+
+tbody tr {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(75, 0, 204, 0.1);
+    transform: scale(1.02);
+}
+
+.tablehead {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+}
+
+.f1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid rgb(143, 122, 255);
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(75, 0, 204);
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 55px;
+    width: 55px;
+    background: linear-gradient(135deg, rgb(75, 0, 204), rgb(120, 60, 255));
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.back-to-top:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 15px 25px rgba(75, 0, 204, 0.6);
+    background: linear-gradient(135deg, rgb(120, 60, 255), rgb(75, 0, 204));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+footer {
+    background-color: rgb(75, 0, 204);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: rgb(149, 8, 231);
+    width: 60%;
+    margin: 25px auto;
+}
+
+@media (max-width: 768px) {
+    #about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #intro {
+        font-size: 24px;
+    }
+
+    .list-items {
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
